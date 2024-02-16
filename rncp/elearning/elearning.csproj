@@ -160,7 +160,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Avancement.cs" />
+    <Compile Include="Models\DaoAvancement.cs" />
+    <Compile Include="Models\DaoQuiz.cs" />
     <Compile Include="Models\DaoUtilisateur.cs" />
+    <Compile Include="Models\Quiz.cs" />
     <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
