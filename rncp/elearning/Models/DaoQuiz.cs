@@ -26,13 +26,14 @@ namespace elearning.Models
         }
         public bool Update(Quiz q)
         {
-            string sql = "update Quiz set question=@question,reponse=@reponse where id=@id ";
+            string sql = "update Quiz set question=@question,cours=@cours,reponse=@reponse where id=@id ";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
             command.CommandText = sql;
 
             command.Parameters.Add("id", SqlDbType.Int).Value = q.Id;
             command.Parameters.Add("question", SqlDbType.NVarChar).Value = q.Question;
+            command.Parameters.Add("cours", SqlDbType.NVarChar).Value = q.Cours;
             command.Parameters.Add("reponse", SqlDbType.NVarChar).Value = q.Reponse;
 
             connection.Open();
@@ -45,13 +46,14 @@ namespace elearning.Models
         }
         public bool Insert(Quiz q)
         {
-            string sql = "insert into Quiz values(@id,@question,@reponse)";
+            string sql = "insert into Quiz values(@id,@question,@cours,@reponse)";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
             command.CommandText = sql;
 
             command.Parameters.Add("id", SqlDbType.Int).Value = q.Id;
             command.Parameters.Add("question", SqlDbType.NVarChar).Value = q.Question;
+            command.Parameters.Add("cours", SqlDbType.NVarChar).Value = q.Cours;
             command.Parameters.Add("reponse", SqlDbType.NVarChar).Value = q.Reponse;
 
             connection.Open();
@@ -76,7 +78,7 @@ namespace elearning.Models
 
             while (reader.Read())
             {
-                Quiz q = new Quiz(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                Quiz q = new Quiz(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                 liste.Add(q);
 
             }
@@ -97,7 +99,7 @@ namespace elearning.Models
             SqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
-                q = new Quiz(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                q = new Quiz(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
             connection.Close();
 
             return q;

@@ -21,6 +21,13 @@ namespace elearning.Models
             this.question = question;
             this.reponse = reponse;
         }
+        public Avancement(int id, int idU, int question, bool reponse)
+        {
+            this.id = id;
+            this.idUtilisateur = idU;
+            this.question = question;
+            this.reponse = reponse;
+        }
         public int Id
         {
             get { return id; }

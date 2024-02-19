@@ -25,6 +25,16 @@ namespace elearning.Models
             this.prenom = prenom;
             this.email = email;
         }
+        public Utilisateur(int id,string login, string password, string nom, string prenom, string email)
+        {
+            this.id = id;
+            this.login = login;
+            this.password = password;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.email = email;
+        }
+
         public int Id
         {
             get { return id; }
