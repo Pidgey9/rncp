@@ -1,0 +1,10 @@
+Liste des risques :
+- Manque de fonds (aide d'Etat introuvable ou pas assez d'abonnés)
+- Concurrence en avance
+- Concurrence avec une meilleure qualité produit
+- Hébergement des serveurs introuvables
+- Tombe en panne
+- Sécurité des données du site et de ses utilisateurs
+- Hack/DDOS
+- Marketing/découverte non suffisant
+- Procédures de maintenance des sites ou mises à jour non connues

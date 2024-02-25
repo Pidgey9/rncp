@@ -1,0 +1,8 @@
+valeur x :
+- Classe de l'élève : niveau de la classe de l'élève (6e, 5e...)
+- Confiance de l'élève : niveau de confiance de l'élève en physique chimie (faible, moyen, confiant)
+- Nombre d'erreurs effectués
+- Délais de réponse aux questions
+
+valeur y:
+L'élève a-t-il besoin d'aide (non, un peu, beaucoup)

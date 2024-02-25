@@ -8,8 +8,9 @@ namespace elearning.Models
     public class Quiz
     {
         private int id;
-        private string question;
+        private string enonce;
         private string cours;
+        private string question;
         private string reponse;
         public Quiz()
         {
@@ -26,15 +27,20 @@ namespace elearning.Models
         {
             get { return id; }
         }
-        public string Question
+        public string Enonce
         {
-            get { return question; }
-            set { question = value; }
+            get { return enonce; }
+            set { enonce = value; }
         }
         public string Cours
         {
             get { return cours; }
             set { cours = value; }
+        }
+        public string Question
+        {
+            get { return question; }
+            set { question = value; }
         }
         public string Reponse
         {

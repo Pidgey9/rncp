@@ -11,6 +11,7 @@ namespace elearning.Models
         private int idUtilisateur;
         private int question;
         private bool reponse;
+        private int mauvaise;
         public Avancement()
         {
 
@@ -45,6 +46,9 @@ namespace elearning.Models
             get { return reponse; }
             set { reponse = value; }
         }
-
+        public int Mauvaise
+        {
+            get { return mauvaise; }
+        }
     }
 }

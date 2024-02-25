@@ -1,0 +1,84 @@
+Afin de construire un système de prédiction des nécessités de l'élève pour réussir ses questions, les données suivantes seront analysés par ce système :
+
+- Niveau de l'élève : Donnée configuré par l'élève lors de la création de son compte.
+- Notes de l'élève : Collectés à l'aide de son nom et prénom et par la recherche de son établissement et ses notes en cours.
+- Avancement de l'élève : Essentiels pour savoir si l'élève utilise bien le site et obtient une progression.
+- Nombre d'erreurs effectués : Afin d'obtenir des données sur la difficulté pour outrepasser une question.
+- Géolocalisation : Donnée permettant d'obtenir son milieu social et le lieu de son établissement.
+- Délais de réponse aux questions : Prédiction de l'instant où l'élève a des difficultés.
+- Avis, recommendations et suggestions des élève et parents d'élèves pour améliorer le site ou l'accompagnement.
+
+Ces données sont analysées et combinées à l'aide de techniques statistiques et d'apprentissage automatique pour prédire la probabilité, le rythme des difficultés rencontrés par l'élève. Le succès de la prédiction dépend de la qualité et de la résolution des données, ainsi que de la sophistication des modèles utilisés pour l'analyse. 
+
+La décision d'utiliser une méthode de classification ou de régression dans un système de prédiction des nécessités de l'élève dépend de la nature de la question ou de l'objectif spécifique que vous cherchez à adresser. Voici comment choisir entre ces deux approches : 
+Classification 
+La classification est utilisée lorsque l'objectif est de prédire des catégories ou des classes distinctes. Dans le contexte de la prédiction de difficultés rencontrés, la classification pourrait être employée pour : 
+Prédire si l'élève a besoin d'aide (oui / non). 
+Déterminer l'implication de l'aide (faible, modéré, sévère). 
+Identifier l'aide appropriée (lien YouTube, mise en évidence du cours, etc.). 
+ 
+Régression 
+La régression est utilisée pour prédire des valeurs continues. Dans le contexte de la prédiction de difficultés rencontrés, la régression pourrait être employée pour : 
+Prédire la difficulté d'une question à l'élève. 
+Estimer si l'élève en question peut résoudre la question. 
+Prévoir que l'élève n'abandonne pas en cours de route à cause de la difficulté. 
+ 
+Exemples d'application 
+Classification : Si vous développez un système pour envoyer de l'aide à l'élève, vous pourriez utiliser un modèle de classification pour déterminer si l'aide sera nécessaire et suffisante pour que l'élève réussise son exercice.
+ 
+Régression : Si votre objectif est de prédire la réussite et la progression de l'élève, vous utiliserez un modèle de régression pour estimer les questions adéquates. 
+ 
+Choix de la méthode 
+Le choix entre la classification et la régression dépend donc de si vous cherchez à prédire l'appartenance à une catégorie (par exemple, l'élève progresse-t-il ?) ou une valeur numérique spécifique (par exemple, est ce que son avancement est satisfaisant ?). Dans la pratique, un système de prédiction des difficultés rencontrés pourrait intégrer à la fois des modèles de classification et de régression pour couvrir différents aspects du système d'accompagnement.
+
+Sachant que nous ne pouvons pas et savons pas modifier nos questions selon les difficultés de l'élève, nous n'avons d'autre choix que de privilégier un système de classification :
+
+----------------------------------------------
+
+1. Collecte et préparation des données
+2. Sélection des caractéristiques
+3. Division des données
+4. Choix du modèle
+5. Entraînement du modèle
+6. Évaluation du modèle
+7. Amélioration et ajustement
+8. Déploiement
+
+--------------------------------------------------
+
+1. Collecte et préparation des données
+Commencez par rassembler des données historiques pertinentes .......
+Nettoyez et pré-traitez ces données pour gérer les valeurs manquantes et normaliser les valeurs si nécessaire.
+
+2. Sélection des caractéristiques
+Identifiez les variables (ou caractéristiques) qui sont les plus pertinentes pour prédire les difficultés rencontrés et les aides promulgés. Cela peut inclure des analyses de corrélation ou l'utilisation de techniques de sélection de caractéristiques automatiques.
+3. Division des données
+Divisez votre ensemble de données en un ensemble d'entraînement, de validation (facultatif) et de test. Une division typique pourrait être 70% pour l'entraînement, 15% pour la validation, et 15% pour le test.
+4. Choix du modèle
+Sélectionnez un algorithme de classification adapté. Les choix populaires incluent :
+La régression logistique, pour sa simplicité et efficacité dans les problèmes binaires.
+Les arbres de décision ou les forêts aléatoires, pour leur capacité à gérer des données complexes et non linéaires.
+Les machines à vecteurs de support (SVM), efficaces pour les espaces de grande dimension.
+Les réseaux de neurones, particulièrement utiles pour les ensembles de données volumineux et complexes.5. Entraînement du modèle
+Entraînez votre modèle sur l'ensemble d'entraînement en ajustant les hyperparamètres pour optimiser les performances. Utilisez l'ensemble de validation, si disponible, pour éviter le surajustement.
+6. Évaluation du modèle
+Testez le modèle sur l'ensemble de test pour évaluer sa performance. Les métriques courantes incluent la précision, le rappel, le score F1, et l'AUC (Area Under the ROC Curve).
+7. Amélioration et ajustement
+En fonction des résultats, vous pourriez avoir besoin de revenir aux étapes précédentes pour ajuster les caractéristiques, changer le modèle ou réajuster les hyperparamètres.
+8. Déploiement
+Une fois satisfait des performances du modèle, vous pouvez le déployer pour prédire en temps réel si un élève nécessite de l'aide.
+
+
+
+
+----------------------------------------------------------------------
+3. Division des données
+La division des données en ensembles d'entraînement, de validation, et de test est une étape cruciale dans le développement de modèles de machine learning. Voici une définition plus détaillée de chacun de ces ensembles :
+Ensemble d'entraînement
+L'ensemble d'entraînement est utilisé pour apprendre les données, c'est-à-dire pour entraîner le modèle. Le modèle apprend à associer les entrées (caractéristiques) aux sorties attendues (cibles). L'ensemble d'entraînement représente la majorité des données disponibles et est essentiel pour que le modèle capture les patterns sous-jacents dans les données. Une division typique attribue environ 70% des données à l'entraînement, bien que ce pourcentage puisse varier selon la taille et la spécificité du dataset.
+Ensemble de validation
+L'ensemble de validation est utilisé pour fournir une évaluation non biaisée des performances du modèle pendant l'entraînement. Il permet de régler les hyperparamètres (paramètres du modèle qui ne sont pas appris directement à partir des données) et de choisir le meilleur modèle. Bien que facultatif, l'utilisation d'un ensemble de validation est fortement recommandée pour éviter le surajustement, où le modèle apprend trop bien les données d'entraînement au point de mal généraliser sur de nouvelles données. Typiquement, 15% des données sont réservées à la validation.
+Ensemble de test
+L'ensemble de test sert à évaluer les performances finales du modèle. Il doit être totalement indépendant des données d'entraînement et de validation et n'est utilisé qu'une seule fois, après que le modèle a été complètement formé et validé. Utiliser un ensemble de test distinct garantit que l'évaluation des performances du modèle est réaliste et reflète sa capacité à généraliser sur des données qu'il n'a jamais vues auparavant. Comme pour l'ensemble de validation, environ 15% des données sont souvent allouées au test.
+Pourquoi diviser les données ?
+La division des données en ces trois ensembles aide à évaluer correctement la capacité du modèle à généraliser sur de nouvelles données, minimisant ainsi le risque de surajustement. Le surajustement se produit lorsque le modèle apprend les détails et le bruit dans l'ensemble d'entraînement au point de mal performer sur de nouvelles données. En séparant les données de cette manière, on s'assure que le processus d'entraînement et d'évaluation du modèle est robuste, fiable, et prêt pour une application réelle.
