@@ -1,0 +1,28 @@
+Conception :
+-Equipe:
+1 développeur front-end marketing et 1 développeur back-end hébergeur
+-Languages:
+C#, Angular(typescript)
+-Architecture MVC (back-end):
+-UML:
+-Les Classes et Attributs:
+-Architecture front-end:
+TypeScript, HTTPClient, Bootstrap
+-Les components:
+header, navbar, footer, router-outlet, inscription, menu, double(question-réponse)
+-Diagramme de séquences:
+-Fonctionnalités admin:
+
+
+Modalités de Livraison :
+-Hébergement serveurs Azure VMs:
+recommendation VM Standard B2s dans la région du Centre, estimation du prix : 30 euros par mois (pay-as-you-go)
+-Nom de domaine(url du site):
+www.sitePhyChi.com, estimation à 15 euros par an
+-Certificat SSL (pour la sécurité):
+Domaine simple pour une estimation de 50 euros par an
+
+Budget :
+Le coût total de l'hébergement serait de 425 euros par an soit 510 après la TVA.
+Soit pour un total de 5100 euros pour 10 ans de fonctionnement que l'on rajoutera à 6000 euros pour prévoir des coûts optionnels.
+
