@@ -1,0 +1,11 @@
+<body class="bg-dark text-light">
+    <div class="container">
+        {{q.Question}}
+    </div>
+    <div class="container">
+        {{q.Reponse}}
+        <input type="text" [(ngModel)]="reponse">
+        <button (click)="valider()">VALIDER</button>
+        {{message}}
+    </div>
+</body>
