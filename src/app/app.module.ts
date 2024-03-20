@@ -17,6 +17,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { AvancementComponent } from './avancement/avancement.component';
 import { InfoComponent } from './info/info.component';
+import { UnityComponent } from './unity/unity.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { InfoComponent } from './info/info.component';
     InscriptionComponent,
     AvancementComponent,
     InfoComponent,
+    UnityComponent,
   ],
   imports: [
     BrowserModule,

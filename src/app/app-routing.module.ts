@@ -8,6 +8,7 @@ import { AvancementComponent } from './avancement/avancement.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { InfoComponent } from './info/info.component';
+import { UnityComponent } from './unity/unity.component';
 
 const routes: Routes = [
   {path: 'menu', component: MenuComponent},
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path: 'connexion', component: ConnexionComponent},
   {path: 'inscription', component: InscriptionComponent},
   {path: 'info', component: InfoComponent},
+  {path: 'unity', component: UnityComponent},
+
   
 ];
 
